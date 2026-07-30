@@ -1,0 +1,17 @@
+import canonicalLaneMathlib.AdmissibleClass
+import HautevilleHouse.VibrationsDynamicalProblemsSolidMechanicsCanonicalLaneLean.ElasticContinuum
+import HautevilleHouse.VibrationsDynamicalProblemsSolidMechanicsCanonicalLaneLean.ModalAnalysis
+import HautevilleHouse.VibrationsDynamicalProblemsSolidMechanicsCanonicalLaneLean.ForcedResponse
+
+namespace HautevilleHouse
+namespace VibrationsDynamicalProblemsSolidMechanicsCanonicalLaneLean
+
+def ConstrainedVibrationDynamicsClosure (A : AdmissibleClass) : Prop :=
+  bridgeClosed A ∧ gateClosed A
+
+theorem constrained_vibration_dynamics_endgame (A : AdmissibleClass) :
+    ConstrainedVibrationDynamicsClosure A := by
+  exact And.intro (bridge_from_admissible_class A) (gate_from_admissible_class A)
+
+end VibrationsDynamicalProblemsSolidMechanicsCanonicalLaneLean
+end HautevilleHouse

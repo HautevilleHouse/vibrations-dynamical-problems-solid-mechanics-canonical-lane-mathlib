@@ -1,0 +1,10 @@
+import canonicalLaneMathlib.AdmissibleClass
+
+namespace HautevilleHouse
+namespace VibrationsDynamicalProblemsSolidMechanicsCanonicalLaneLean
+
+def VibrationBridgeClosed (O : MechanicalAdmittedObject) : Prop :=
+  O.vibrationAnalysisComplete
+
+end VibrationsDynamicalProblemsSolidMechanicsCanonicalLaneLean
+end HautevilleHouse
